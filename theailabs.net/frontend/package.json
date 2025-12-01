@@ -1,0 +1,11 @@
+{
+  "name": "theailabs-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for The AI Labs static site",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html dist/ && cp -R css dist/ && cp -R js dist/"
+  },
+  "dependencies": {
+    "theailabs-root": "file:.."
+  }
+}

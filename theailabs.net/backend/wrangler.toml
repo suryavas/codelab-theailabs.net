@@ -1,0 +1,7 @@
+name = "theailabs-worker"
+main = "server.js"
+bundle = false
+compatibility_date = "2023-10-27"
+
+[vars]
+MY_VARIABLE = "value_for_testing"

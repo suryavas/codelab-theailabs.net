@@ -1,0 +1,16 @@
+{
+  "name": "theailabs-root",
+  "version": "1.0.0",
+  "description": "Root package for The AI Labs project",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install --prefix frontend && npm install --prefix backend",
+    "frontend:build": "npm run build --prefix frontend",
+    "frontend:deploy": "npm run frontend:build && wrangler pages deploy ./frontend/dist --project-name=theailabs-net",
+    "backend:deploy": "npm install --prefix backend && wrangler deploy backend --env production",
+    "deploy": "npm run frontend:deploy && npm run backend:deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

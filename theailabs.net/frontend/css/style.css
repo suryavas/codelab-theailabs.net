@@ -1,0 +1,72 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #e2e8f0;
+    --accent-color: #38bdf8; /* Cyber Blue */
+    --hover-color: #0ea5e9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.highlight { color: var(--accent-color); }
+
+/* Nav */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #0f172a; border-bottom: 1px solid #334155; }
+.logo { font-size: 1.5rem; font-weight: bold; font-family: 'Courier New', monospace; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--accent-color); }
+
+/* Hero */
+.hero { text-align: center; padding: 100px 20px; }
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 40px; color: #94a3b8; }
+.btn { background: var(--accent-color); color: #0f172a; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
+.btn:hover { background: var(--hover-color); }
+
+/* Sections */
+.section { padding: 80px 0; }
+.bg-darker { background-color: #020617; }
+h2 { text-align: center; margin-bottom: 50px; font-size: 2rem; }
+
+/* Cards */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card { background: var(--card-bg); padding: 30px; border-radius: 10px; border: 1px solid #334155; transition: 0.3s; }
+.card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
+.card i { font-size: 2rem; color: var(--accent-color); margin-bottom: 20px; }
+
+/* FAQ */
+.accordion-item { background: var(--card-bg); margin-bottom: 10px; border-radius: 5px; overflow: hidden; }
+.accordion-header { width: 100%; padding: 20px; text-align: left; background: none; border: none; color: var(--text-color); font-size: 1.1rem; cursor: pointer; outline: none; display: flex; justify-content: space-between; }
+.accordion-header:after { content: '+'; font-size: 1.5rem; }
+.accordion-body { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #0f172a; }
+.accordion-body p { padding: 20px 0; color: #94a3b8; }
+.active .accordion-header:after { content: '-'; }
+
+/* Contact Form */
+.contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+.contact-form input, .contact-form textarea { padding: 15px; background: var(--card-bg); border: 1px solid #334155; color: white; border-radius: 5px; outline: none; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent-color); }
+
+/* Chat Widget */
+.chat-widget { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+.chat-btn { width: 60px; height: 60px; border-radius: 50%; background: var(--accent-color); border: none; color: #0f172a; font-size: 24px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+.chat-window { position: absolute; bottom: 80px; right: 0; width: 350px; height: 450px; background: var(--card-bg); border-radius: 10px; border: 1px solid #334155; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.hidden { display: none; }
+.chat-header { background: #0f172a; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; }
+.chat-messages { flex: 1; padding: 15px; overflow-y: auto; }
+.message { margin-bottom: 10px; max-width: 80%; padding: 10px; border-radius: 5px; font-size: 0.9rem; }
+.message.bot { background: #334155; align-self: flex-start; }
+.message.user { background: var(--accent-color); color: #0f172a; margin-left: auto; }
+.chat-input { display: flex; padding: 10px; background: #0f172a; }
+.chat-input input { flex: 1; padding: 10px; border-radius: 5px; border: none; outline: none; margin-right: 10px; }
+.chat-input button { background: none; border: none; color: var(--accent-color); cursor: pointer; font-size: 1.2rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .chat-window { width: 300px; right: -20px; }
+}

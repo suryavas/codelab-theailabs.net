@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AI Labs | Private Local Intelligence</title>
+    <!-- CSS is now in the css/ subfolder -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">TheAI<span class="highlight">Labs</span>.net</div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Stop Renting Intelligence.<br>Build It <span class="highlight">Locally</span>.</h1>
+            <p>Complete Local LLM Setup, Home Automation Integration, and Private RAG Solutions. Your data stays on your hardware.</p>
+            <a href="#contact" class="btn">Start Your Setup</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Our Core Solutions</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-server"></i>
+                    <h3>Local LLM Server</h3>
+                    <p>We build high-performance local AI servers using Ollama and NVIDIA hardware. Run Llama 3, Mistral, and more without monthly fees.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-home"></i>
+                    <h3>Home Automation</h3>
+                    <p>Integrate Voice AI with Home Assistant. Control your lights, security, and climate with a private voice assistant that actually listens.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-file-shield"></i>
+                    <h3>Private RAG Archives</h3>
+                    <p>Chat with your personal documents (PDFs, Finance, Legal) securely. No data ever leaves your local network.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section bg-darker">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Is my data truly private?</button>
+                    <div class="accordion-body">
+                        <p>Yes. Our setups are designed to run offline or behind a secure VPN. We prioritize local processing over cloud APIs.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">What hardware do I need?</button>
+                    <div class="accordion-body">
+                        <p>It depends on the model size. We can work with anything from a Mac Mini (M-series) to a custom RTX 4090 rig.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can I integrate this with Alexa/Google?</button>
+                    <div class="accordion-body">
+                        <p>We recommend replacing them with local voice satellites (like ESP32 boxes) connected to Home Assistant for true privacy, but hybrid setups are possible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Initialize Project</h2>
+            <!-- Note: Update formspree ID below with your own -->
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Tell us about your hardware or goals..." required></textarea>
+                <button type="submit" class="btn">Send Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 The AI Labs. All systems nominal.</p>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button id="chat-toggle" class="chat-btn"><i class="fas fa-robot"></i></button>
+        <div class="chat-window hidden" id="chat-window">
+            <div class="chat-header">
+                <span>LabBot (AI Assistant)</span>
+                <button id="close-chat">&times;</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    <p>Welcome to The AI Labs. I can help answer questions about Local LLMs or setup costs. Ask me anything!</p>
+                }
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type a message...">
+                <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript is now in the js/ subfolder -->
+    <script src="js/script.js"></script>
+</body>
+</html>
